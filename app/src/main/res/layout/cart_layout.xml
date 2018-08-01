@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+<include layout="@layout/header_cart_layout"></include>
+</LinearLayout>
+    <com.zmm.zhoumin20180730.view.ScrolView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <RelativeLayout
+            android:id="@+id/p_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/cart_view"
+            >
+            <com.zmm.zhoumin20180730.view.ExpandListView
+                android:id="@+id/exlistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scrollbars="none"
+                ></com.zmm.zhoumin20180730.view.ExpandListView>
+            <TextView
+                android:id="@+id/cart_xiaoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/exlistview"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="小计：￥0.0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cart_xiaoji"
+                android:layout_marginTop="84dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="猜你喜欢" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cart_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </RelativeLayout>
+    </com.zmm.zhoumin20180730.view.ScrolView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#FFFFFF">
+
+        <CheckBox
+            android:id="@+id/cart_frag_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/cart_frag_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cart_frag_checkbox"
+            android:text="已选（0）" />
+
+        <TextView
+            android:id="@+id/cart_frag_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="120dp"
+            android:text="￥0.0"
+            android:textColor="#FF0000" />
+
+        <TextView
+            android:id="@+id/cart_frag_xiadan"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#FF0000"
+            android:gravity="center"
+            android:text="下单"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</LinearLayout>

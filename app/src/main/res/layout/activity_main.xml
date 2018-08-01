@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zmm.zhoumin20180730.MainActivity">
+
+    <include layout="@layout/header_one_layout"></include>
+    <include layout="@layout/header_two_layout"></include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="100dp">
+    <com.example.library.AutoFlowLayout
+        android:id="@+id/auto_flow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.example.library.AutoFlowLayout>
+        <RelativeLayout
+            android:id="@+id/find"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="150dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="猜你想找"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:id="@+id/textView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/shape01"
+                android:text="情侣T恤"
+                android:textSize="20sp"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_marginLeft="34dp"
+                android:layout_marginStart="34dp"
+                android:layout_toEndOf="@+id/textView2"
+                android:layout_toRightOf="@+id/textView2"
+                android:text="条纹衬衫男"
+                android:background="@drawable/shape01"
+                android:textSize="20sp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

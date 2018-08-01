@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+      <RelativeLayout
+          android:layout_width="460dp"
+          android:layout_height="50dp"
+          >
+
+            <ImageView
+                android:id="@+id/t_fan"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                app:srcCompat="@drawable/fan" />
+
+            <EditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/t_fan"
+                android:layout_toRightOf="@+id/t_fan"
+                android:background="@null"
+                android:hint="短袖男" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                app:srcCompat="@drawable/xiang" />
+      </RelativeLayout>
+
+      <TextView
+          android:id="@+id/t_sousuo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginTop="10dp"
+          android:text="搜索"
+          android:textStyle="bold"
+          android:textSize="25sp"
+          />
+</RelativeLayout>
